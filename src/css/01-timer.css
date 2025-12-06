@@ -1,0 +1,121 @@
+/* --- Sayfa Genel Yapısı --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050505; /* Simsiyah Arka Plan */
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace; /* Tekno Font */
+  display: flex;
+  flex-direction: column; /* Öğeleri alt alta diz */
+  align-items: center;    /* Yatay ortala */
+  justify-content: center; /* Dikey ortala */
+  min-height: 100vh;      /* Tam ekran */
+}
+
+/* --- Tarih Seçici Input --- */
+input#datetime-picker {
+  background-color: transparent;
+  border: 2px solid #03e9f4;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 25px; /* Butonla arayı aç */
+  box-shadow: 0 0 5px #03e9f433; /* Hafif parlama */
+  transition: 0.3s;
+}
+
+input#datetime-picker:focus {
+  box-shadow: 0 0 20px #03e9f4; /* Tıklayınca parlasın */
+}
+
+/* --- Start Butonu --- */
+button[data-start] {
+  background: transparent;
+  color: #03e9f4;
+  border: 2px solid #03e9f4;
+  padding: 10px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 50px; /* Timer ile arayı aç */
+  transition: 0.3s;
+  box-shadow: 0 0 10px #03e9f433;
+}
+
+button[data-start]:hover {
+  background: #03e9f4;
+  color: #050505; /* Yazı siyah */
+  box-shadow: 0 0 20px #03e9f4, 0 0 40px #03e9f4; /* Neon Efekti */
+}
+
+button[data-start]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Timer Kutusu --- */
+.timer {
+  display: flex;
+  gap: 20px; /* Kutular arası boşluk */
+  margin-bottom: 40px;
+}
+
+/* Kutucuklar (Gün, Saat vb.) */
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 233, 244, 0.05); /* Çok hafif mavi zemin */
+  border: 1px solid #03e9f4;
+  padding: 20px;
+  min-width: 100px; /* Sabit genişlik */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(3, 233, 244, 0.1);
+}
+
+/* Sayılar */
+.value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 15px #03e9f4; /* Rakamların parlaması */
+  margin-bottom: 5px;
+}
+
+/* Etiketler (Days, Hours) */
+.label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #03e9f4;
+}
+
+/* --- Go Back Linki --- */
+a {
+  color: #03e9f4; /* Mavi yazı */
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border: 1px solid transparent; /* Çerçeve yeri hazır olsun */
+  transition: 0.3s;
+}
+
+a:hover {
+  border: 1px solid #03e9f4;
+  box-shadow: 0 0 10px #03e9f4;
+  border-radius: 4px;
+}

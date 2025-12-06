@@ -1,0 +1,58 @@
+/* Sayfa Sıfırlama ve Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505; /* Kapkaranlık arka plan */
+    font-family: 'Courier New', Courier, monospace; /* Tekno/Kod havası için */
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;     /* Dikey ortalama */
+    min-height: 100vh;       /* Tam ekran yüksekliği */
+}
+
+/* Liste Ayarları */
+ul {
+    list-style: none; /* Madde işaretlerini kaldır */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Linkler arası boşluk */
+    padding: 20px;
+}
+
+/* Link (Buton) Tasarımı */
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #03e9f4; /* Neon Mavisi Yazı */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #03e9f4; /* Neon Çerçeve */
+    border-radius: 5px; /* Hafif yuvarlak köşeler */
+    overflow: hidden;
+    transition: 0.5s; /* Animasyon hızı */
+
+    /* Neon Parlama Efekti (Pasif Durum) */
+    box-shadow: 0 0 10px #03e9f433;
+    text-shadow: 0 0 5px #03e9f4;
+}
+
+/* Hover (Üzerine Gelince) Efekti */
+a:hover {
+    background: #03e9f4; /* Arka plan mavi olur */
+    color: #050505;      /* Yazı siyah olur (kontrast için) */
+
+    /* Güçlü Neon Parlaması */
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+
+    text-shadow: none;
+}

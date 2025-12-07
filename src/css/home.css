@@ -44,12 +44,11 @@ a {
     text-shadow: 0 0 5px #03e9f4;
 }
 
-/* Hover (Üzerine Gelince) Efekti */
-a:hover {
-    background: #03e9f4; /* Arka plan mavi olur */
-    color: #050505;      /* Yazı siyah olur (kontrast için) */
 
-    /* Güçlü Neon Parlaması */
+a:hover {
+    background: #03e9f4;
+    color: #050505;
+
     box-shadow: 0 0 20px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 100px #03e9f4;
